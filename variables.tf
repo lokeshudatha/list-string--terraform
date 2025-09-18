@@ -1,14 +1,16 @@
+
+variable "ports" {
+  type = list(number)
+  default = [ 22, 443, 8080, 9000, 80 ]
+}
+
+variable "network" {
+  type = string
+  default = "lokesh-network"
+}
+
 variable "name" {
   type = list(string)
-  default = [ "lokesh", "udatha", "loki" ]
+  default = [ "firewall-one", "firewall-two", "fire-three" ]
 }
 
-variable "zone" {
-  type = list(string)
-  default = [ "us-central1-a", "us-central1-b", "us-central1-c" ]
-}
-
-variable "machine_type" {
-  type = list(string)
-  default = [ "e2-small", "e2-medium", "e2-micro" ]
-}
